@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background: url('./images/hero.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
