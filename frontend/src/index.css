@@ -13,7 +13,7 @@
 }
 
 input{
-  background-color: rgba(16, 84, 55, 0.533) !important;
+  background-color: #10543788 !important;
 }
 
 body{
@@ -74,7 +74,7 @@ body{
 }
 
 .first-letter{
-  color: rgb(73, 27, 27) !important;
+  color: #491b1b !important;
 }
 
 .chatify{
@@ -87,14 +87,18 @@ body{
 }
 
 ::-webkit-scrollbar-track {
-	background: #555;
+	background: #10543788;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #121212;
+	background: #2B110E;
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #242424;
+	background: #2B110E;
+}
+
+.btn-circle{
+  border-radius: 9999px !important;
 }

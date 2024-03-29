@@ -12,8 +12,12 @@ const Message = () => {
         </div>
       </div>
 
-      <div className={`chat-bubble text-white bg-blue-500`}>Hi! what is up ?</div>
-      <div className="chat-footer flex items-center gap-1 text-xs opacity-50">12:42</div>
+      <div className={`chat-bubble text-white bg-[#C7203C]`}>
+        Hi! what is up ?
+      </div>
+      <div className="chat-footer flex items-center gap-1 text-xs opacity-50">
+        12:42
+      </div>
     </div>
   );
 }
