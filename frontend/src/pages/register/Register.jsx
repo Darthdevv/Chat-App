@@ -53,7 +53,9 @@ const Register = () => {
               placeholder="John Doe"
               className="w-full input input-bordered  h-10"
               value={inputs.fullName}
-              onChange={(e) => setInputs({...inputs, fullName: e.target.value })}
+              onChange={(e) =>
+                setInputs({ ...inputs, fullName: e.target.value })
+              }
             />
           </div>
 
@@ -66,7 +68,9 @@ const Register = () => {
               placeholder="johndoe"
               className="w-full input input-bordered h-10"
               value={inputs.username}
-              onChange={(e)=> setInputs({...inputs, username: e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, username: e.target.value })
+              }
             />
           </div>
 
@@ -79,7 +83,9 @@ const Register = () => {
               placeholder="Enter Password"
               className="w-full input input-bordered h-10"
               value={inputs.password}
-              onChange={(e)=> setInputs({...inputs, password: e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, password: e.target.value })
+              }
             />
           </div>
 
@@ -92,11 +98,16 @@ const Register = () => {
               placeholder="Confirm Password"
               className="w-full input input-bordered h-10"
               value={inputs.confirmPassword}
-              onChange={(e)=> setInputs({...inputs, confirmPassword: e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, confirmPassword: e.target.value })
+              }
             />
           </div>
 
-          <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
+          <GenderCheckbox
+            onCheckboxChange={handleCheckboxChange}
+            selectedGender={inputs.gender}
+          />
 
           <Link
             className="text-sm hover:underline hover:text-red-900 mt-2 inline-block"
@@ -106,7 +117,13 @@ const Register = () => {
           </Link>
 
           <div>
-            <button className="btn btn-block btn-sm mt-2">Sign Up</button>
+            <button disabled={loading} className="btn btn-block btn-sm mt-2">
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Register"
+              )}
+            </button>
           </div>
         </form>
       </div>

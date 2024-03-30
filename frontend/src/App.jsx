@@ -21,7 +21,7 @@ function App() {
         },
         {
           path: "/register",
-          element: authUser ? <Navigate to={"/"} /> : <Register />,
+          element: authUser ? <Navigate to={"/"}/> : <Register />,
         },
         {
           path: "/login",
