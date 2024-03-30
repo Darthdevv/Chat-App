@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GenderCheckbox from "./GenderCheckbox";
 import { Link } from "react-router-dom";
+import useRegister from "../../hooks/useRegister";
 
 const Register = () => {
 
@@ -12,13 +13,23 @@ const Register = () => {
     gender: "",
   });
 
+  const { loading, register } = useRegister();
+
   const handleCheckboxChange = (gender) => {
     setInputs({...inputs,gender})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    await register(inputs);
     console.log(inputs);
+    setInputs({
+      fullName: "",
+      username: "",
+      password: "",
+      confirmPassword: "",
+      gender: "",
+    })
   }
 
 	return (

@@ -1,13 +1,12 @@
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import './App.css'
-import Home from './pages/home/Home';
-import Register from './pages/register/Register';
-import Login from './pages/login/Login'
-import MainLayout from './layouts/MainLayout';
-
+import { Toaster } from "react-hot-toast";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/home/Home";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -20,19 +19,24 @@ function App() {
         },
         {
           path: "/register",
-          element: <Register/>
+          element: <Register />,
         },
         {
-          path: '/login',
-          element: <Login/>
-        }
+          path: "/login",
+          element: <Login />,
+        },
       ],
     },
   ]);
 
   return (
-    <RouterProvider router={router}/>
+    <>
+      <div>
+        <Toaster />
+      </div>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
-export default App
+export default App;
