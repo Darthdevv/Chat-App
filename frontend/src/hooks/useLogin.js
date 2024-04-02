@@ -33,7 +33,17 @@ const useLogin = () => {
       setAuthUser(data);
 
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.message, {
+        style: {
+          background: "#105437ee ",
+          border: "1px solid #476456ee",
+          padding: "16px",
+        },
+        iconTheme: {
+          primary: "#C7203Cee",
+          secondary: "#fff",
+        },
+      });
     } finally {
       setLoading(false);
     }
@@ -49,12 +59,32 @@ function handleInputErrors(
   password
 ) {
   if ( !username || !password ) {
-    toast.error("Please fill in all fields");
+    toast.error("Please fill in all fields", {
+      style: {
+        background: "#105437ee ",
+        border: "1px solid #476456ee",
+        padding: "16px",
+      },
+      iconTheme: {
+        primary: "#C7203Cee",
+        secondary: "#fff",
+      },
+    });
     return false;
   }
 
   if (password.length < 6) {
-    toast.error("Password must be at least 6 characters");
+    toast.error("Password must be at least 6 characters", {
+      style: {
+        background: "#105437ee ",
+        border: "1px solid #476456ee",
+        padding: "16px",
+      },
+      iconTheme: {
+        primary: "#C7203Cee",
+        secondary: "#fff",
+      },
+    });
     return false;
   }
 

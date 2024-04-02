@@ -25,7 +25,17 @@ const useSendMessage = () => {
       setMessages([...messages, data]);
 
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.message, {
+        style: {
+          background: "#105437ee ",
+          border: "1px solid #476456ee",
+          padding: "16px",
+        },
+        iconTheme: {
+          primary: "#C7203Cee",
+          secondary: "#fff",
+        },
+      });
     } finally {
       setLoading(false);
     }
